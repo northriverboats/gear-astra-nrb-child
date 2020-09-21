@@ -1,0 +1,17 @@
+/* 
+Theme Name: Astra NRB Child 
+Theme URL: http://gear.northriverboats.com
+Description: Astra NRB Child 
+Theme Author: Fredrick W. Warren
+Author URL: http://home.elder-geek.net
+Template: astra
+Version: 1.0.0 
+Text Domain: astra-child 
+*/
+
+.backtoshop {
+  font-weight:bold;
+  text-transform:uppercase;
+  font-size:90%; letter-spacing:!px; border: 2px solid; padding:3px; border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 4px 4px 4px 4px;}
