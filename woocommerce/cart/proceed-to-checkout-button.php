@@ -22,9 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
+<!-- nrb: start -->
 <a href="/store" class="checkout-button button alt wc-forward">
 	Continue Shopping
 </a>
+<!-- nrb: end -->
 <a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="checkout-button button alt wc-forward">
 	<?php esc_html_e( 'Proceed to checkout', 'woocommerce' ); ?>
 </a>
