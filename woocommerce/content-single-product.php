@@ -59,9 +59,10 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_single_product_summary' );
 		?>
-    <!-- <div><a href="/store" class="backtostore">◀ Return to Shopping</a></div> -->
-    <div><a href="/store" class="button wc-forward">Return to Shopping</a></div>
-  </div>
+		<!-- nrb: start -->
+		<div><a href="/store" class="button wc-forward">Return to Shopping</a></div>
+		<!-- nrb: end -->
+ 	</div>
 
 	<?php
 	/**
