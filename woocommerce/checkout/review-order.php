@@ -57,14 +57,16 @@ defined( 'ABSPATH' ) || exit;
 			<td><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
+		<!-- nrb: start -->
 		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
-      <?php if ( $fee->name == 'Survey Thank You Discount' ) : ?>
-  			<tr class="fee">
-	  			<th><?php echo esc_html( $fee->name ); ?></th>
-		  		<td><?php wc_cart_totals_fee_html( $fee ); ?></td>
-			  </tr>
-      <?php endif; ?>
+			<?php if ( $fee->name == 'Survey Thank You Discount' ) : ?>
+  				<tr class="fee">
+	  				<th><?php echo esc_html( $fee->name ); ?></th>
+		  			<td><?php wc_cart_totals_fee_html( $fee ); ?></td>
+				  </tr>
+			<?php endif; ?>
 		<?php endforeach; ?>
+		<!-- nrb: end -->
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
@@ -84,12 +86,14 @@ defined( 'ABSPATH' ) || exit;
 		<?php endif; ?>
 
 		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
-      <?php if ( $fee->name != 'Survey Thank You Discount' ) : ?>
-  			<tr class="fee">
-	  			<th><?php echo esc_html( $fee->name ); ?></th>
-		  		<td><?php wc_cart_totals_fee_html( $fee ); ?></td>
-			  </tr>
-      <?php endif; ?>
+			<!-- nrb: start -->
+			<?php if ( $fee->name != 'Survey Thank You Discount' ) : ?>
+  				<tr class="fee">
+	  				<th><?php echo esc_html( $fee->name ); ?></th>
+		  			<td><?php wc_cart_totals_fee_html( $fee ); ?></td>
+				  </tr>
+			<?php endif; ?>
+			<!-- nrb: end -->
 		<?php endforeach; ?>
 
 		<?php if ( wc_tax_enabled() && ! WC()->cart->display_prices_including_tax() ) : ?>
